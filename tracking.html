@@ -37,7 +37,10 @@
     embedded
     arjs="trackingMethod: best; sourceType: webcam;debugUIEnabled: false;"
   >
-    <!-- a-nft is the anchor that defines an Image Tracking entity -->
+  <a-assets>
+    <img id="my-image" src="https://poloarqueologicodeviseu.github.io/a-imagem-que-falta/assets/img/donut.png">
+  </a-assets> 
+  <!-- a-nft is the anchor that defines an Image Tracking entity -->
     <!-- on 'url' use the path to the Image Descriptors created before. -->
     <!-- the path should end with the name without the extension e.g. if file is 'pinball.fset' the path should end with 'pinball' -->
     <a-nft
@@ -49,8 +52,7 @@
       smoothThreshold="5"
     >
         <!-- as a child of the a-nft entity, you can define the content to show. here's a GLTF model entity -->
-        <a-entity text="value: Hello World;"></a-entity>
-
+        <a-image src="#my-image"></a-image>
     </a-nft>
     <!-- static camera that moves according to the device movemenents -->
     <a-entity camera></a-entity>
